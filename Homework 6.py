@@ -1,7 +1,7 @@
 # 1
 number1 = 1000, 34007890  # 6 нулів
-string = str(number1)
-zero_count1 = string.count("0")
+string1 = str(number1)
+zero_count1 = string1.count("0")
 print(zero_count1)
 
 # 2
@@ -13,93 +13,98 @@ while number2 % 10 == 0:
 print(zero_count2)
 
 # 3
-my_list_1 = [1, 2, 3, 4]
-my_list_2 = [2, 3, 4, 5]
-my_result = my_list_1[::2] + my_list_2[::2]
-print(my_result)
+my_list3_1 = [1, 2, 3, 4]
+my_list3_2 = [2, 3, 4, 5]
+my_result3 = my_list3_1[::2] + my_list3_2[::2]
+print(my_result3)
 
 # 4
 my_list4 = [1, 2, 3, 4]
-first_value = my_list4.pop(0)
-new_list = my_list4
-new_list.append(first_value)
-print(new_list)
+first_value4 = my_list4.pop(0)
+new_list4 = my_list4
+new_list4.append(first_value4)
+print(new_list4)
 
 # 5
 my_list5 = [1, 2, 3, 4]
-first_value = my_list5.pop(0)
-my_list5.append(first_value)
+first_value5 = my_list5.pop(0)
+my_list5.append(first_value5)
 print(my_list5)
 
 # 6
-txt = "43 > 34 < 56".split(" ")
-sum_num = 0
-for txt in txt:
-    if txt.isdigit():
-        sum_num += int(txt)
-print(sum_num)
+my_string6 = "43! більше ніж 34, але менше ніж 56."
+
+checkup6_1 = my_string6.replace(",", " ")
+checkup6_2 = checkup6_1.replace(".", " ")
+checkup6_3 = checkup6_2.replace("!", " ").split()
+
+sum_num6 = 0
+for checkup3 in checkup6_3:
+    if checkup3.isdigit():
+        sum_num6 += int(checkup3)
+print(sum_num6)
 
 # 7
-numbers = [2, 4, 1, 5, 3, 9, 0, 7]
-count = 0
+numbers7 = [2, 4, 1, 5, 3, 9, 0, 7]
+count7 = 0
 
-for i in range(1, len(numbers) - 1):
-    if numbers[i] > numbers[i - 1] + numbers[i + 1]:
-        count += 1
-        print(f"{numbers[i]} > {numbers[i - 1]} + {numbers[i + 1]}")
-print(count)
+for i in range(1, len(numbers7) - 1):
+    if numbers7[i] > numbers7[i - 1] + numbers7[i + 1]:
+        count7 += 1
+        print(f"{numbers7[i]} > {numbers7[i - 1]} + {numbers7[i + 1]}")
+print(count7)
 
 # 8
-my_list = [1, 2, 3, "11", "22", 33]
-new_list = []
-for i in my_list:
+my_list8 = [1, 2, 3, "11", "22", 33]
+new_list8 = []
+for i in my_list8:
     if isinstance(i, str):
-        new_list.append(i)
-print(new_list)
+        new_list8.append(i)
+print(new_list8)
 
-# 9
-my_string = "Hello World!"
-my_list1 = []
+# 9.1
+my_string9 = "Hello World!"
+my_list9 = []
 
-for i in my_string:
-    if my_string.count(i) == 1:
-        my_list1.append(i)
-print(my_list1)
+for i in my_string9:
+    if my_string9.count(i) == 1:
+        my_list9.append(i)
+print(my_list9)
 
-# 9
-my_list = []
-value_set1 = {1, 1, 2, 3, 4, 5, "a", "b", "c", "d", "e"}
-value_set2 = {1, 3, 5, "b", "d"}
+# 9.2
+my_list09 = []
+value_set09_1 = {1, 1, 2, 3, 4, 5, "a", "b", "c", "d", "e"}
+value_set09_2 = {1, 3, 5, "b", "d"}
 
-value_set1 = value_set1.intersection(value_set2)
-b = len(value_set1)
+value_set09 = value_set09_1.intersection(value_set09_2)
+b = len(value_set09_1)
 
 for i in range(b):
-    a = value_set1.pop()
-    my_list.append(a)
-print(my_list)
+    a = value_set09_1.pop()
+    my_list09.append(a)
+print(my_list09)
 
 # 10
-my_string1 = "aaaasdf1"
-my_string2 = "asdfff2"
+my_string0_1 = "aaaasdf1"
+my_string0_2 = "asdfff2"
 
-set1 = set(my_string1)
-set2 = set(my_string2)
+set0_1 = set(my_string0_1)
+set0_2 = set(my_string0_2)
 
-my_list0 = list(set1.intersection(set2))
+my_list0 = list(set0_1.intersection(set0_2))
 print(my_list0)
 
 # 11
-my_string11 = "aaaasdf1"
-my_string22 = "asdfff2"
+my_string01_1 = "aaaasdf1"
+my_string02_2 = "asdfff2"
 
-set11 = set(my_string11)
-set22 = set(my_string22)
+set11 = set(my_string01_1)
+set22 = set(my_string02_2)
 
-my_list = list(set11.intersection(set22))
-result_list = []
+my_list01 = list(set11.intersection(set22))
+result_list01 = []
 
-for i in my_list:
-    if my_string11.count(i) == 1 and my_string22.count(i) == 1:
-        result_list.append(i)
-print(result_list)
+for i in my_list01:
+    if my_string01_1.count(i) == 1 and my_string02_2.count(i) == 1:
+        result_list01.append(i)
+print(result_list01)
