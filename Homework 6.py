@@ -71,20 +71,20 @@ for i in my_string9:
         my_list9.append(i)
 print(my_list9)
 
-# 9.2
-my_list09 = []
-value_set09_1 = {1, 1, 2, 3, 4, 5, "a", "b", "c", "d", "e"}
-value_set09_2 = {1, 3, 5, "b", "d"}
+# 10.1
+my_list01 = []
+value_set01_1 = {1, 1, 2, 3, 4, 5, "a", "b", "c", "d", "e"}
+value_set01_2 = {1, 3, 5, "b", "d"}
 
-value_set09 = value_set09_1.intersection(value_set09_2)
-b = len(value_set09_1)
+value_set09 = value_set01_1.intersection(value_set01_2)
+b = len(value_set01_1)
 
 for i in range(b):
-    a = value_set09_1.pop()
-    my_list09.append(a)
-print(my_list09)
+    a = value_set01_1.pop()
+    my_list01.append(a)
+print(my_list01)
 
-# 10
+# 10.2
 my_string0_1 = "aaaasdf1"
 my_string0_2 = "asdfff2"
 
