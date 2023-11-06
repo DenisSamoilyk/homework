@@ -31,11 +31,11 @@ print(process_strings(my_list1))
 def find_first_a(my_list):
     new_list = []
 
-    for index in my_list:
-        lower_case = index.lower()
+    for i in my_list:
+        lower_case = i.lower()
         first_letter = lower_case[0]
         if first_letter == "a":
-            new_list.append(index)
+            new_list.append(i)
 
     return new_list
 
@@ -47,12 +47,12 @@ print(find_first_a(my_list2))
 def find_letter_a(my_list):
     new_list = []
 
-    for index in my_list:
-        lower_case = index.lower()
+    for i in my_list:
+        lower_case = i.lower()
         find_letter = lower_case.find("a")
         find_a = lower_case[find_letter]
         if find_a == "a":
-            new_list.append(index)
+            new_list.append(i)
 
     return new_list
 
@@ -64,9 +64,9 @@ print(find_letter_a(my_list2))
 def find_str(my_list):
     new_list = []
 
-    for index in my_list:
-        if isinstance(index, str):
-            new_list.append(index)
+    for i in my_list:
+        if isinstance(i, str):
+            new_list.append(i)
 
     return new_list
 
@@ -78,9 +78,9 @@ print(find_str(my_list4))
 def just_one_time(my_string):
     my_list = []
 
-    for index in my_string:
-        if my_string.count(index) == 1:
-            my_list.append(index)
+    for i in my_string:
+        if my_string.count(i) == 1:
+            my_list.append(i)
 
     return my_list
 
@@ -90,9 +90,9 @@ print(just_one_time(my_string5))
 
 # 6
 def at_least_once(set_1, set_2):
-    set_1 = set(my_string_1)
-    set_2 = set(my_string_2)
-    my_list = list(set_1.intersection(set_2))
+    set1 = set(set_1)
+    set2 = set(set_2)
+    my_list = list(set1.intersection(set2))
 
     return my_list
 
@@ -100,22 +100,35 @@ def at_least_once(set_1, set_2):
 print(at_least_once(my_string_1, my_string_2))
 
 
-# 7
+# 7.1
 def only_once(set_1, set_2):
     result_list = []
-    set_1 = set(my_string_1)
-    set_2 = set(my_string_2)
+    set1 = set(set_1)
+    set2 = set(set_2)
 
-    my_list = list(set_1.intersection(set_2))
+    my_list = list(set1.intersection(set2))
 
-    for index in my_list:
-        if my_string_1.count(index) == 1 and my_string_2.count(index) == 1:
-            result_list.append(index)
+    for i in my_list:
+        if my_string_1.count(i) == 1 and my_string_2.count(i) == 1:
+            result_list.append(i)
 
     return result_list
 
 
 print(only_once(my_string_1, my_string_2))
+
+# 7.2
+"""
+Оскільки ми вже використовували функцію щоб знайти літери які зустрічаються хоча б 1 раз,
+Я використовую цю функцію щоб знайти і символи які зустрічаються тільки 1 раз.
+"""
+result_list = []
+for index in at_least_once(my_string_1, my_string_2):
+    if my_string_1.count(index) == 1 and my_string_2.count(index) == 1:
+        result_list.append(index)
+
+
+print(result_list)
 
 # 8
 names = ["king", "miller", "kean"]
@@ -147,8 +160,3 @@ print(f"{names[random_number(0, (length_names-1))]}."
       f"{random_alphabet(5, 7)}."
       f"{domains[random_number(0, (length_domains-1))]}"
       )
-
-
-
-
-
