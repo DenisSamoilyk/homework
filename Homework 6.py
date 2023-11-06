@@ -39,9 +39,9 @@ checkup6_2 = checkup6_1.replace(".", " ")
 checkup6_3 = checkup6_2.replace("!", " ").split()
 
 sum_num6 = 0
-for checkup3 in checkup6_3:
-    if checkup3.isdigit():
-        sum_num6 += int(checkup3)
+for checkup in checkup6_3:
+    if checkup.isdigit():
+        sum_num6 += int(checkup)
 print(sum_num6)
 
 # 7
