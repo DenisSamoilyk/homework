@@ -2,7 +2,7 @@ from random import randint, shuffle
 from string import ascii_lowercase
 
 my_list1 = ["qwe", "abc", 1234, "Hello"]  # ewq, abc, 4321, Hello
-my_list2 = ["ABC", "cuba", "abc", "def"]  # ABC, abc
+my_list2 = ["ABC", "cuba", "abc", "def"]  # 2) ABC, abc; # 3) ABC, cuba, abc
 my_list4 = [1234, "hi", "welcome", 1]  # hi, welcome
 my_string5 = "Hello World!"  # H, e, " ", W, r, d, !
 my_string_1 = "aaaasdf1"  # 6) a, s, d, f
@@ -102,7 +102,7 @@ print(at_least_once(my_string_1, my_string_2))
 
 # 7.1
 def only_once(set_1, set_2):
-    result_list = []
+    res_list = []
     set1 = set(set_1)
     set2 = set(set_2)
 
@@ -112,7 +112,7 @@ def only_once(set_1, set_2):
         if my_string_1.count(i) == 1 and my_string_2.count(i) == 1:
             result_list.append(i)
 
-    return result_list
+    return res_list
 
 
 print(only_once(my_string_1, my_string_2))
