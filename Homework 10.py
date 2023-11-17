@@ -28,6 +28,7 @@ def create_folder_describe(path, reverse=False):
 print(create_folder_describe("../Homework", True))
 
 
+# 3
 def check_if_correct(all_dicts):
     file_list = []
     new_file_list = []
