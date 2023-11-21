@@ -110,7 +110,7 @@ def only_once(set_1, set_2):
 
     for i in my_list:
         if my_string_1.count(i) == 1 and my_string_2.count(i) == 1:
-            result_list.append(i)
+            res_list.append(i)
 
     return res_list
 
